@@ -53,6 +53,12 @@ public class StashBuilds {
         String rootUrl = globalConfig.getUrl();
         String buildUrl = "";
         if (rootUrl == null) {
+            // Get hold of the currently active config, if this version
+            // of Jenkins core returns an empty one as new()
+            globalConfig = JenkinsLocationConfiguration.get();
+            rootUrl = globalConfig.getUrl();
+        }
+        if (rootUrl == null) {
             buildUrl = " PLEASE SET JENKINS ROOT URL FROM GLOBAL CONFIGURATION " + build.getUrl();
         }
         else {
