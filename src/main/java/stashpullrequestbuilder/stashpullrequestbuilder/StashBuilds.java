@@ -49,24 +49,11 @@ public class StashBuilds {
             return;
         }
         Result result = build.getResult();
-        JenkinsLocationConfiguration globalConfig = new JenkinsLocationConfiguration();
+        // Note: current code should no longer use "new JenkinsLocationConfiguration()"
+        // as only one instance per runtime is really supported by the current core.
+        JenkinsLocationConfiguration globalConfig = JenkinsLocationConfiguration.get();
         String rootUrl = globalConfig.getUrl();
         String buildUrl = "";
-        if (rootUrl == null) {
-            // Get hold of the currently active config, if this version
-            // of Jenkins core returns an empty one as new()
-            try {
-                globalConfig.load();
-                rootUrl = globalConfig.getUrl();
-            } catch (Exception e) {}
-        }
-        if (rootUrl == null) {
-            // Another method to try getting the active config...
-            try {
-                globalConfig = JenkinsLocationConfiguration.get();
-                rootUrl = globalConfig.getUrl();
-            } catch (Exception e) {}
-        }
         if (rootUrl == null) {
             buildUrl = " PLEASE SET JENKINS ROOT URL FROM GLOBAL CONFIGURATION " + build.getUrl();
         }
