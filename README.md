@@ -1,14 +1,13 @@
 Stash Pull Request Builder Plugin
 ================================
 
-[![Join the chat at https://gitter.im/nemccarthy/stash-pullrequest-builder-plugin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nemccarthy/stash-pullrequest-builder-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/nemccarthy/stash-pullrequest-builder-plugin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jenkinsci/stash-pullrequest-builder-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://ci.jenkins.io/buildStatus/icon?job=Plugins/stash-pullrequest-builder-plugin/master)](https://ci.jenkins.io/job/Plugins/job/stash-pullrequest-builder-plugin/job/master/)
 
 This Jenkins plugin builds pull requests from a Atlassian Stash server and will report the test results as a comment.
 This plugin was inspired by the GitHub & BitBucket pull request builder plugins.
 
 - Official [Jenkins Plugin Page](https://wiki.jenkins-ci.org/display/JENKINS/Stash+pullrequest+builder+plugin)
-- See this [blogpost](http://blog.nemccarthy.me/?p=387) for more details
-
 
 ## Prerequisites
 
@@ -106,7 +105,7 @@ If you are using the [StashNotifier plugin](https://wiki.jenkins-ci.org/display/
 
 If you want to rerun pull request test, write *"test this please"* comment to your pull request.
 
-##Adding additional parameters to a build
+## Adding additional parameters to a build
 
 If you want to add additional parameters to the triggered build, add comments using the pattern `p:<parameter_name>=<value>`, one at each line, prefixed with `p:`. If the same parameter name appears multiple times the latest comment with that parameter will decide the value.
 
