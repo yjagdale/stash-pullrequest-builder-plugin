@@ -12,7 +12,7 @@
   <packaging>hpi</packaging>
   
   <name>Stash Pullrequest Builder Plugin</name>
-  <description>This Jenkins plugin builds pull requests from Stash and will report the test results</description>
+  <description>This plugin builds Stash pull requests and posts the build results on Stash</description>
   <url>https://wiki.jenkins.io/display/JENKINS/Stash+pullrequest+builder+plugin</url>
 
   <developers>
