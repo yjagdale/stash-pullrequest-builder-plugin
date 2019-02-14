@@ -109,7 +109,14 @@
           <configuration>
             <excludeFilterFile>${basedir}/src/findbugs-exclude.xml</excludeFilterFile>
           </configuration>
-        </plugin>
+        </plugin> 
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <configuration>
+            <excludePackageNames>stashpullrequestbuilder.stashpullrequestbuilder.repackage.*</excludePackageNames>
+          </configuration>
+        </plugin>        
       </plugins>
     </pluginManagement>
     <plugins>
