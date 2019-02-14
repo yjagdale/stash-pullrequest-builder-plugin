@@ -11,6 +11,6 @@
      </Match>
 
      <Match>
-       <Package name="stashpullrequestbuilder.stashpullrequestbuilder.repackage.*" />
+       <Package name="~stashpullrequestbuilder\.stashpullrequestbuilder\.repackage\..*" />
      </Match>     
 </FindBugsFilter>
