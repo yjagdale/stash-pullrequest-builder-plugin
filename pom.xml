@@ -58,12 +58,12 @@
     <changelist>-SNAPSHOT</changelist>
     <java.level>8</java.level>
   </properties>
-  
+
   <dependencies>
     <dependency>
       <groupId>commons-httpclient</groupId>
       <artifactId>commons-httpclient</artifactId>
-      <version>3.1-jenkins-1</version>
+      <version>3.1</version>
     </dependency>
     <dependency>
       <groupId>commons-codec</groupId>
